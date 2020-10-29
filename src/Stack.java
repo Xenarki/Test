@@ -22,4 +22,21 @@ public class Stack {
             stck[i] = a[i];
         }
     }
+    void push(char ch){
+        if(tos == stck.length){
+            System.out.println("Стек переполнен!");
+            return;
+        }
+        stck[tos] = ch;
+        tos++;
+    }
+
+    char pop(){
+        if(tos == 0){
+            System.out.println("Стек кончился!");
+            return;
+        }
+        tos--;
+        return stck[tos];
+    }
 }
