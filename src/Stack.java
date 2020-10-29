@@ -10,16 +10,15 @@ public class Stack {
     Stack(Stack ob) {
         tos = ob.tos;
         stck = new char[ob.stck.length];
-        for (int i; i < tos; i++) {
+        for (int i = 0; i < tos; i++) {
             stck[i] = ob.stck[i];
         }
     }
 
     Stack(char a[]) {
-        tos = a.length;
         stck = new char[a.length];
-        for (int i = 0; i < tos; i++) {
-            stck[i] = a[i];
+        for (int i = 0; i < stck.length; i++) {
+            push(a[i]);
         }
     }
     void push(char ch){
@@ -34,7 +33,7 @@ public class Stack {
     char pop(){
         if(tos == 0){
             System.out.println("Стек кончился!");
-            return;
+            return 0;
         }
         tos--;
         return stck[tos];
