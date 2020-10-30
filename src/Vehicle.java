@@ -1,7 +1,7 @@
 public class Vehicle {
-    int passengers;
-    int mpg;
-    int fuelcap;
+   private int passengers;
+   private int mpg;
+   private int fuelcap;
 
     Vehicle(int p, int m, int f){
         passengers = p;
@@ -15,5 +15,11 @@ public class Vehicle {
     double fuelneeded(int miles){
         return (double) miles / mpg;
     }
+    int getPassengers() { return passengers; }
+    void setPassengers(int p) { passengers = p; }
+    int getFuelcap() { return fuelcap; }
+    void setFuelcap(int f) { fuelcap = f; }
+    int getMpg() { return mpg; }
+    void setMpg(int m) { mpg = m; }
 }
 
