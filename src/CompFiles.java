@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class CompFiles {
-    public static void(String args[]){
+    public static void main(String args[]){
         int i = 0, j = 0;
         if(args.length != 2){
             System.out.println("CompFiles файл1 файл2");
@@ -14,7 +14,7 @@ public class CompFiles {
                 if(i != j){
                     break;
                 }
-            }while(i != -1 && j != -1)
+            }while(i != -1 && j != -1);
                 if(i != j){
                     System.out.println("Содержимое файлов отличается");
                 }
